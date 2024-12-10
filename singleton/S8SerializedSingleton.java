@@ -7,7 +7,8 @@ public class S8SerializedSingleton implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private S8SerializedSingleton() {}
+    private S8SerializedSingleton() {
+    }
 
     private static class SingletonHelper {
         private static final S8SerializedSingleton INSTANCE = new S8SerializedSingleton();

@@ -11,7 +11,8 @@ package singleton;
  * */
 public class S6BillPughSingleton {
 
-    private S6BillPughSingleton(){}
+    private S6BillPughSingleton() {
+    }
 
     private static class SingletonHelper {
         private static final S6BillPughSingleton INSTANCE = new S6BillPughSingleton();

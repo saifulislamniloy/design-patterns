@@ -12,7 +12,8 @@ package singleton;
 public class S3LazyInitializedSingleton {
     private static S3LazyInitializedSingleton instance;
 
-    private S3LazyInitializedSingleton(){}
+    private S3LazyInitializedSingleton() {
+    }
 
     public static S3LazyInitializedSingleton getInstance() {
         if (instance == null) {
