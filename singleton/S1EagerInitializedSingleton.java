@@ -6,14 +6,16 @@ package singleton;
  * 2. Thread-safe ✅
  * 3. Instance creation on demand ❌
  * 4. Option for exception handling during instance creation ❌
+ * 5. Performance efficient ✅
+ * 6. Survive reflection api ❌
  * */
-public class EagerInitializedSingleton {
-    private static final EagerInitializedSingleton instance = new EagerInitializedSingleton();
+public class S1EagerInitializedSingleton {
+    private static final S1EagerInitializedSingleton instance = new S1EagerInitializedSingleton();
 
-    private EagerInitializedSingleton() {
+    private S1EagerInitializedSingleton() {
     }
 
-    public static singleton.EagerInitializedSingleton getInstance() {
+    public static S1EagerInitializedSingleton getInstance() {
         return instance;
     }
 }

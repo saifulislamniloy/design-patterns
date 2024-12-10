@@ -1,20 +1,23 @@
 package singleton;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-public class SerializedSingleton implements Serializable {
+public class S8SerializedSingleton implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
-    private SerializedSingleton() {}
+    private S8SerializedSingleton() {}
 
     private static class SingletonHelper {
-        private static final SerializedSingleton INSTANCE = new SerializedSingleton();
+        private static final S8SerializedSingleton INSTANCE = new S8SerializedSingleton();
     }
 
-    public static SerializedSingleton getInstance() {
+    public static S8SerializedSingleton getInstance() {
         return SingletonHelper.INSTANCE;
     }
 
+    @Serial
     protected Object readResolve() {
         return getInstance();
     }
